@@ -14,11 +14,17 @@ protocol ClassBDelegate : class {
 
 class ClassBViewController: UIViewController {
 
+    @IBOutlet weak var myLabel: UILabel!
+    
+    public var helper = ""
+    
     weak var delegate : ClassBDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        myLabel.text = helper
+        
         // Do any additional setup after loading the view.
     }
 

@@ -8,6 +8,15 @@
 
 import UIKit
 
+class ItFusionCustomCell : UITableViewCell {
+
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lblYear: UILabel!
+    @IBOutlet weak var lblColour: UILabel!
+    @IBOutlet weak var lblCategory: UILabel!
+    
+}
+
 class TableDetailsViewController: UITableViewController {
 
     var sampleData = SampleDataView.GetSampleData()
@@ -45,11 +54,15 @@ class TableDetailsViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ModelDetails", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ModelDetails", for: indexPath) as! ItFusionCustomCell
 
-        cell.textLabel?.text = "Model name: " + sampleData[selectedArrayIndex].modelList[selectedDetailIndex].modelDetails.modelName
+        cell.lblName.text = "Model name: " + sampleData[selectedArrayIndex].modelList[selectedDetailIndex].modelDetails.modelName
         
-        cell.detailTextLabel?.text = "Model category: " + sampleData[selectedArrayIndex].modelList[selectedDetailIndex].modelDetails.modelCategory
+        cell.lblCategory?.text = "Model category: " + sampleData[selectedArrayIndex].modelList[selectedDetailIndex].modelDetails.modelCategory
+        
+        cell.lblYear?.text = "Model year: " + String(sampleData[selectedArrayIndex].modelList[selectedDetailIndex].modelDetails.modelYear)
+        
+        cell.lblColour?.text = "Model colour: " + sampleData[selectedArrayIndex].modelList[selectedDetailIndex].modelDetails.modelColour
         
         return cell
     }

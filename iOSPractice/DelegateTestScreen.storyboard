@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Jump to second"/>
                                 <connections>
-                                    <segue destination="3tk-mb-hIw" kind="show" id="1KQ-1v-3k4"/>
+                                    <action selector="jump_Tap:" destination="c4Z-2q-Uw2" eventType="touchUpInside" id="nUX-ny-n1Q"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -39,7 +39,7 @@
         <!--ClassB View Controller-->
         <scene sceneID="Z3z-he-NOb">
             <objects>
-                <viewController id="Nz0-4q-FBb" customClass="ClassBViewController" customModule="iOSPractice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MySecondVC" id="Nz0-4q-FBb" customClass="ClassBViewController" customModule="iOSPractice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oUr-9e-ghc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,6 +60,13 @@
                                     <action selector="changeColor2_tap:" destination="Nz0-4q-FBb" eventType="touchUpInside" id="TBy-yg-GhX"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMd-ah-ADS">
+                                <rect key="frame" x="166" y="395" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Lyg-Oe-hht"/>
@@ -71,6 +78,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="myLabel" destination="fMd-ah-ADS" id="lgz-zI-yii"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UgK-iz-1Hc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -79,7 +89,7 @@
         <!--Navigation Controller-->
         <scene sceneID="SRt-Ax-XX9">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7dw-9B-2aB" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MyFirstNav" automaticallyAdjustsScrollViewInsets="NO" id="7dw-9B-2aB" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6dH-8Z-0p7">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -97,7 +107,7 @@
         <!--Navigation Controller-->
         <scene sceneID="B3f-sM-po8">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3tk-mb-hIw" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MySecondNav" automaticallyAdjustsScrollViewInsets="NO" id="3tk-mb-hIw" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dIh-tf-wsD">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
