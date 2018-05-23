@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zhK-fn-lor">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Animation Pratice View Controller-->
+        <scene sceneID="T6H-2r-EXC">
+            <objects>
+                <viewController id="zhK-fn-lor" customClass="AnimationPraticeViewController" customModule="iOSPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aJR-zB-alG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C5O-l3-Mvf">
+                                <rect key="frame" x="20" y="120" width="335" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fxx-Nf-vbt">
+                                        <rect key="frame" x="20" y="20" width="295" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Fxx-Nf-vbt" secondAttribute="bottom" constant="147" id="8Ea-CS-Q5l"/>
+                                    <constraint firstItem="Fxx-Nf-vbt" firstAttribute="leading" secondItem="C5O-l3-Mvf" secondAttribute="leading" constant="20" id="HVv-U3-mKz"/>
+                                    <constraint firstAttribute="height" constant="200" id="d3T-bm-DPu"/>
+                                    <constraint firstItem="Fxx-Nf-vbt" firstAttribute="top" secondItem="C5O-l3-Mvf" secondAttribute="top" constant="20" id="dS5-fs-WAN"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fxx-Nf-vbt" secondAttribute="trailing" constant="20" id="zWl-Pt-MWZ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="H1P-Cn-HrG" firstAttribute="trailing" secondItem="C5O-l3-Mvf" secondAttribute="trailing" constant="20" id="FOK-Qi-TUK"/>
+                            <constraint firstItem="H1P-Cn-HrG" firstAttribute="bottom" secondItem="C5O-l3-Mvf" secondAttribute="bottom" constant="347" id="LjA-HV-kiU"/>
+                            <constraint firstItem="C5O-l3-Mvf" firstAttribute="leading" secondItem="H1P-Cn-HrG" secondAttribute="leading" constant="20" id="aKA-sO-fWI"/>
+                            <constraint firstItem="C5O-l3-Mvf" firstAttribute="top" secondItem="H1P-Cn-HrG" secondAttribute="top" constant="100" id="o3U-mi-Nta"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="H1P-Cn-HrG"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomCons" destination="LjA-HV-kiU" id="Xvl-WA-oq1"/>
+                        <outlet property="bottomLabelCons" destination="8Ea-CS-Q5l" id="wZa-np-Kmp"/>
+                        <outlet property="topCons" destination="o3U-mi-Nta" id="upL-BY-Kqb"/>
+                        <outlet property="topLabelCons" destination="dS5-fs-WAN" id="JLA-ec-w6R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cNp-k0-qzL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="204" y="180"/>
+        </scene>
+    </scenes>
+</document>
